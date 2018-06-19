@@ -34,12 +34,13 @@ There are certainly a lot of things that can be improved! If you would like to c
 These are functions that take a function as a parameter or return functions.
 ```scala
     // sum() returns a function that takes two integers and returns an integer  
-    def sum(f: Int => Int): (Int, Int) => Int = {  
+    def sum(f: Int => Int): (Int, Int) => Int = {   
       def sumf(a: Int, b: Int): Int = {...}  
       sumf  
     } 
     
-    // same as above. Its type is (Int => Int) => (Int, Int) => Int  
+    // same as above. Its type is (Int => Int) => (Int, Int) => Int
+    // I think it isnt same as above. Above example returns function whereas this one requires to return Int value(or maybe i am dummy :3 )
     def sum(f: Int => Int)(a: Int, b: Int): Int = { ... } 
 
     // Called like this
